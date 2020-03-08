@@ -7,22 +7,23 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.edson.app.produtos.models.entities.Produto;
+import com.edson.app.produtos.models.repositories.ProdutoRepository;
 
 @Service
 public class ProdutoServiceImpl implements ProdutoService {
 
 	@Autowired
-	private ProdutoService produtoService;
+	private ProdutoRepository produtoRepository;
 	
 	@Override
 	@Transactional(readOnly = true)
 	public List<Produto> findAll() {
-		return produtoService.findAll();
+		return produtoRepository.findAll();
 	}
 
 	@Override
 	public Produto findById(Long id) {
-		return produtoService.findById(id);
+		return produtoRepository.findById(id).orElse(null);
 	}
 
 }
