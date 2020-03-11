@@ -23,6 +23,12 @@ public class ProdutoController {
 	
 	@GetMapping("/produtos/{id}")
 	public Produto show(@PathVariable Long id) {
+//		try {
+//			Thread.sleep(2000L);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		return produtoService.findById(id);
 	}
 }
