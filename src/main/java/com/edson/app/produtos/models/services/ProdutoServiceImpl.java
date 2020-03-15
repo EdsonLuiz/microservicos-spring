@@ -26,4 +26,16 @@ public class ProdutoServiceImpl implements ProdutoService {
 		return produtoRepository.findById(id).orElse(null);
 	}
 
+	@Override
+	@Transactional
+	public Produto save(Produto produto) {
+		return produtoRepository.save(produto);
+	}
+
+	@Override
+	@Transactional
+	public void deleteById(Long id) {
+		produtoRepository.deleteById(id);
+	}
+
 }
