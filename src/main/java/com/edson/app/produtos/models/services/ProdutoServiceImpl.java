@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.edson.app.produtos.models.entities.Produto;
+import com.edson.app.commons.models.entities.Produto;
 import com.edson.app.produtos.models.repositories.ProdutoRepository;
 
 @Service

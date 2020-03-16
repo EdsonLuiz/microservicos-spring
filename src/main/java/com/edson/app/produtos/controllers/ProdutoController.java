@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.edson.app.produtos.models.entities.Produto;
+import com.edson.app.commons.models.entities.Produto;
 import com.edson.app.produtos.models.services.ProdutoService;
 
 @RestController
